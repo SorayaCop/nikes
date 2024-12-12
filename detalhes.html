@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Tênis Nike">
+    <meta name="description" content="Catálogo digital. Peça agora mesmo!">
+    <title>Nikes - Revendedor</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon-nikes.svg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="detalhes/css/bootstrap.min.css">
+    <link rel="stylesheet" href="detalhes/css/fontawesome.min.css">
+    <link rel="stylesheet" href="detalhes/css/venobox.min.css">
+    <link rel="stylesheet" href="detalhes/css/odometer.min.css">
+    <link rel="stylesheet" href="detalhes/css/nice-select.css">
+    <link rel="stylesheet" href="detalhes/css/swiper.min.css">
+    <link rel="stylesheet" href="detalhes/css/main.css">
+    <link rel="stylesheet" href="detalhes/css/style.css">
+
+
+    <style>
+        .size-button {
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .size-button:hover {
+            background-color: rgb(24, 24, 24);
+            color: aliceblue;
+        }
+
+        .close-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 22px;
+            color: #fff;
+            background-color: #f44336;
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.697);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .close-icon:hover {
+            background-color: #d32f2f;
+            transform: scale(1.1);
+        }
+
+        .zoom-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .zoom-button i {
+            font-size: 20px;
+        }
+
+        .zoom-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="close-icon"><a href="index.html">&times;</a></div>
+
+
+    <!-- PRODUTO -->
+    <section class="shop-section single pt-100 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 product-details-wrap">
+                    <div class="product-slider-wrap">
+                        <div class="swiper product-gallary-thumb">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="thumb-item">
+                                        <img src="artigos/tenis1/product01.jpg" alt="shop">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb-item">
+                                        <img src="artigos/tenis1/product02.jpg" alt="shop">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb-item">
+                                        <img src="artigos/tenis1/product03.jpg" alt="shop">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb-item">
+                                        <img src="artigos/tenis1/product04.jpg" alt="shop">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb-item">
+                                        <img src="artigos/tenis1/product05.jpg" alt="shop">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb-item">
+                                        <img src="artigos/tenis1/product06.jpg" alt="shop">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="thumb-item">
+                                        <img src="artigos/tenis1/product07.jpg" alt="shop">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="swiper product-gallary">
+                            <span class="sale">-5%</span>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="gallary-item">
+                                        <img class="mainImage" src="artigos/tenis1/product01.jpg" alt="shop">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gallary-item">
+                                        <img class="mainImage" src="artigos/tenis1/product02.jpg" alt="shop">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gallary-item">
+                                        <img class="mainImage" src="artigos/tenis1/product03.jpg" alt="shop">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gallary-item">
+                                        <img class="mainImage" src="artigos/tenis1/product04.jpg" alt="shop">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gallary-item">
+                                        <img class="mainImage" src="artigos/tenis1/product05.jpg" alt="shop">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gallary-item">
+                                        <img class="mainImage" src="artigos/tenis1/product06.jpg" alt="shop">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="gallary-item">
+                                        <img class="mainImage" src="artigos/tenis1/product07.jpg" alt="shop">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="swiper-nav-next"><i class="las la-arrow-right"></i></div>
+                            <div class="swiper-nav-prev"><i class="las la-arrow-left"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="product-details">
+                        <div class="product-info">
+                            <div class="product-inner">
+                                <span class="category">Casual</span>
+                                <h3 class="title">Tênis Nike Air Force 1 "07</h3>
+                                <div class="rating-wrap">
+                                    <ul class="rating">
+                                        <li style="color: rgb(255, 208, 1);"><i class="fa-sharp fa-solid fa-star"></i>
+                                        </li>
+                                        <li style="color: rgb(255, 208, 1);"><i class="fa-sharp fa-solid fa-star"></i>
+                                        </li>
+                                        <li style="color: rgb(255, 208, 1);"><i class="fa-sharp fa-solid fa-star"></i>
+                                        </li>
+                                        <li style="color: rgb(255, 208, 1);"><i class="fa-sharp fa-solid fa-star"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h4 class="price">R$ 759,99 <span>R$ 799,99</span></h4>
+                                <div class="product-desc-wrap">
+                                    <p class="desc">O brilho perdura no Nike Air Force 1 ’07, o tênis original do
+                                        basquete que dá um toque de inovação naquilo que você conhece bem: sobreposições
+                                        costuradas e duráveis, acabamentos simples e a quantidade perfeita de brilho
+                                        para fazer você se destacar.</p>
+                                </div>
+                                <div class="sizes flex gap-2">
+                                    <p style="margin-bottom: -3px;">Esolha o tamanho</p>
+                                    <button
+                                        class="size-button border px-4 py-2 hover:bg-gray-200 focus:bg-blue-500">37</button>
+                                    <button
+                                        class="size-button border px-4 py-2 hover:bg-gray-200 focus:bg-blue-500">38</button>
+                                    <button
+                                        class="size-button border px-4 py-2 hover:bg-gray-200 focus:bg-blue-500">39</button>
+                                    <button
+                                        class="size-button border px-4 py-2 bg-gray-300 cursor-not-allowed">40</button>
+                                    <button
+                                        class="size-button border px-4 py-2 bg-gray-300 cursor-not-allowed">41</button>
+                                    <button
+                                        class="size-button border px-4 py-2 bg-gray-300 cursor-not-allowed">42</button>
+
+                                </div>
+                                <div class="sizes flex gap-2" style="margin-bottom: 20px;">
+                                    <p style="margin-bottom: -3px;">Esolha a Cor</p>
+                                    <button
+                                        class="size-button border px-4 py-2 hover:bg-gray-200 focus:bg-blue-500">Branco</button>
+                                    <button
+                                        class="size-button border px-4 py-2 hover:bg-gray-200 focus:bg-blue-500">Preto</button>
+                                </div>
+                                <br>
+                                <div class="item-left-line">
+                                    <span>Apenas 15 disponíveis em nosso estoque!</span>
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                            <div class="product-btn">
+                                <form>
+                                    <input type="number" name="age" id="age" min="1" max="100" step="1" value="1">
+                                </form>
+                                <div class="cart-btn-wrap-2"><a href="#" class="rr-primary-btn cart-btn">Adicionar ao
+                                        Carrinho</a>
+                                </div>
+                            </div>
+                            <a href="index.html" class="shop-details-btn rr-primary-btn">Continuar Comprando</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- DESCRIÇÃO -->
+    <section class="product-description pb-100" style="margin-top: -70px;">
+        <div class="container">
+            <h4>DESCRIÇÃO</h4>
+            <div class="tab-content" id="product-tab-content">
+                <div class="tab-pane fade show active description" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="desc-wrap">
+                        <div class="left-content">
+                            <p class="mb-30">Benefícios
+                                As camadas costuradas na parte de cima trazem estilo, durabilidade e sustentação de
+                                herança.
+                                Projetado originalmente para jogos de basquete de alto desempenho, o amortecimento Nike
+                                Air adiciona leveza para conforto o dia todo.
+                                A silhueta de corte baixo proporciona um look simplificado e minimalista.
+                                A gola acolchoada é macia e confortável.
+                                Detalhes do produto:
+                                Entressola de espuma;
+                                Perfurações na ponta;
+                                Sola de borracha;
+                            </p>
+                            <p class="mb-0">Origens do Air Force 1:
+                                Estreando em 1982, o AF1 foi o primeiro tênis de basquete a abrigar o Nike Air,
+                                revolucionando o jogo e ganhando tração rapidamente em todo o mundo. Hoje, o Air Force 1
+                                permanece fiel às suas raízes com o mesmo amortecimento macio e elástico que mudou a
+                                história dos sneakers.</p>
+                        </div>
+                        <div class="right-content">
+                            <img src="artigos/tenis1/product04.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Link ionicon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+
+    <!--scrollup-->
+    <div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>
+
+
+    <!-- JS here -->
+    <script src="detalhes/js/vendor/jquary-3.6.0.min.js"></script>
+    <script src="detalhes/js/vendor/bootstrap-bundle.js"></script>
+    <script src="detalhes/js/vendor/imagesloaded-pkgd.js"></script>
+    <script src="detalhes/js/vendor/waypoints.min.js"></script>
+    <script src="detalhes/js/vendor/venobox.min.js"></script>
+    <script src="detalhes/js/vendor/odometer.min.js"></script>
+    <script src="detalhes/js/vendor/meanmenu.js"></script>
+    <script src="detalhes/js/vendor/smooth-scroll.js"></script>
+    <script src="detalhes/js/vendor/jquery.isotope.js"></script>
+    <script src="detalhes/js/vendor/wow.min.js"></script>
+    <script src="detalhes/js/vendor/swiper.min.js"></script>
+    <script src="detalhes/js/vendor/split-type.min.js"></script>
+    <script src="detalhes/js/vendor/gsap.min.js"></script>
+    <script src="detalhes/js/vendor/scroll-trigger.min.js"></script>
+    <script src="detalhes/js/vendor/nice-select.js"></script>
+    <script src="detalhes/js/ajax-form.js"></script>
+    <script src="detalhes/js/contact.js"></script>
+    <script src="detalhes/js/main.js"></script>
+</body>
+
+<!-- Mirrored from html.rrdevs.net/roiser/shop-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Oct 2024 03:34:03 GMT -->
+
+</html>

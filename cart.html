@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Pedido</title>
+    <link rel="stylesheet" href="css/pedido.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+        .size-button {
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .size-button:hover {
+            background-color: rgb(24, 24, 24);
+            color: aliceblue;
+        }
+
+        .close-icon {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 22px;
+            color: #fff;
+            background-color: #f44336;
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.697);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .close-icon:hover {
+            background-color: #d32f2f;
+            transform: scale(1.1);
+        }
+
+        .zoom-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .zoom-button i {
+            font-size: 20px;
+        }
+
+        .zoom-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="close-icon"><a style="color: #fff;" href="index.html">&times;</a></div>
+    <ul class="responsive-table" id="cart-items-list">
+        <!-- Produtos adicionados irão aparecer aqui -->
+    </ul>
+    <br><br><br>
+    <input type="text" class="form-control" style="margin-top: -60px;" id="inputAddress2"
+        placeholder="Observações sobre o pedido...">
+    <br>
+    <h5 class="modal-title">Dados para Entrega <ion-icon name="rocket-outline"></ion-icon></h5>
+    <hr>
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <select id="frete" name="frete" class="form-control">
+                    <option value="">Selecione um bairro</option>
+                    <option value="10.00">Olaria</option>
+                    <option value="15.00">Cônego</option>
+                    <option value="20.00">Cascatinha</option>
+                    <option value="18.00">Alto do Mozer</option>
+                    <option value="12.00">Aprazível</option>
+                    <option value="10.00">Bela Vista</option>
+                    <option value="10.00">Braunes</option>
+                    <option value="16.00">Cascatinha</option>
+                    <option value="10.00">Catarcione</option>
+                    <option value="15.00">Córrego D Antas</option>
+                    <option value="12.00">Cônego</option>
+                    <option value="10.00">Centro</option>
+                    <option value="12.00">Chácara Paraíso</option>
+                    <option value="15.00">Conselheiro Paulino</option>
+                    <option value="10.00">Cordoeira</option>
+                    <option value="20.00">Debossan</option>
+                    <option value="12.00">Duas Pedras</option>
+                    <option value="15.00">Fazenda Bela Vista</option>
+                    <option value="18.00">Floresta</option>
+                    <option value="14.00">Granja Mimosa</option>
+                    <option value="15.00">Granja Spinelli</option>
+                    <option value="15.00">Jardim Califórnia</option>
+                    <option value="12.00">Jardim Ouro Preto</option>
+                    <option value="13.00">Jardinlândia</option>
+                    <option value="11.00">Lagoinha</option>
+                    <option value="18.00">Loteamento Floresta</option>
+                    <option value="13.00">Loteamento Nosso Sonho</option>
+                    <option value="16.00">Loteamento Santa Teresinha</option>
+                    <option value="13.00">Loteamento São João</option>
+                    <option value="13.00">Loteamento São José</option>
+                    <option value="13.00">Loteamento São Sebastião</option>
+                    <option value="13.00">Loteamento Sitio Jacina</option>
+                    <option value="18.00">Mury</option>
+                    <option value="15.00">Nova Suíça</option>
+                    <option value="10.00">Olaria</option>
+                    <option value="18.00">Parque das Flores</option>
+                    <option value="12.00">Parque Dom João VI</option>
+                    <option value="10.00">Parque Fonte do Suspiro</option>
+                    <option value="18.00">Parque Maria Teresa</option>
+                    <option value="15.00">Parque Residencial Solares</option>
+                    <option value="10.00">Parque São Clemente</option>
+                    <option value="10.00">Perissê</option>
+                    <option value="12.00">Ponte da Saudade</option>
+                    <option value="16.00">Praça da Furunfa</option>
+                    <option value="14.00">Prado</option>
+                    <option value="17.00">Residencial Terra Nova</option>
+                    <option value="14.00">Rui Sanglard</option>
+                    <option value="12.00">Sans Souci</option>
+                    <option value="16.00">Santa Bernadeth</option>
+                    <option value="10.00">Santa Elisa</option>
+                    <option value="14.00">Santo André</option>
+                    <option value="12.00">São Cristovão</option>
+                    <option value="15.00">São Geraldo</option>
+                    <option value="16.00">São Jorge</option>
+                    <option value="15.00">Sítio São Luis</option>
+                    <option value="10.00">Serraville</option>
+                    <option value="10.00">Suíço</option>
+                    <option value="10.00">Suspiro</option>
+                    <option value="11.00">Tingly</option>
+                    <option value="16.00">Três Irmãos</option>
+                    <option value="12.00">Vale do Sol</option>
+                    <option value="11.00">Vale dos Pinheiros</option>
+                    <option value="15.00">Vargem Grande</option>
+                    <option value="15.00">Varginha</option>
+                    <option value="10.00">Vila Amélia</option>
+                    <option value="10.00">Vila Guarani</option>
+                    <option value="11.00">Vila Nova</option>
+                    <option value="10.00">Vilage</option>
+                    <option value="10.00">Ypu</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" id="inputName" placeholder="Seu Nome">
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" id="inputPhone" placeholder="Telefone para Contato">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-10">
+                <input type="text" class="form-control" id="inputAddress" placeholder="Endereço com Referência">
+            </div>
+            <div class="form-group col-md-2">
+                <input type="text" class="form-control" placeholder="CEP" id="inputZip">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <select id="inputState" class="form-control">
+                    <option selected>Forma de Pagamento</option>
+                    <option value="pix">Pix</option>
+                    <option value="dinheiro">Dinheiro</option>
+                    <option value="cartao">Cartão de Crédito</option>
+                    <option value="cartao-debito">Cartão de Débito</option>
+                    <option value="link">Link de Pagamento</option>
+                </select>
+            </div>
+        </div>
+    </form>
+    <br><br>
+    <div class="total-div">
+        <div class="total-label"><b>TOTAL:</b></div>
+        <div class="total-value" style="color: brown;"><b id="total-value">R$ 0,00 </b></div>
+    </div>
+    </div>
+    <!-- Botões -->
+    <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-dismiss="modal">Continuar Comprando</button>
+        <button type="button" class="btn btn-success" onclick="sendWhatsAppOrder()">
+            Fazer Pedido <ion-icon name="logo-whatsapp"></ion-icon>
+        </button>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
